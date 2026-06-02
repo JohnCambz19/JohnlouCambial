@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Lou L. Cambial — Career Portfolio</title>
+  <meta name="description" content="Administrative and Data Support Associate. Business Economics graduate with expertise in data operations, record management, and administrative support." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Index-only overrides */
+    body { overflow-x: hidden; }
+
+    /* Quick-nav tiles */
+    .nav-tiles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--cream-dk);
+    }
+
+    .nav-tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 2rem 1.5rem;
+      border-right: 1px solid var(--cream-dk);
+      text-decoration: none;
+      color: var(--charcoal);
+      transition: background 0.25s;
+      min-height: 130px;
+    }
+
+    .nav-tile:last-child { border-right: none; }
+
+    .nav-tile:hover { background: var(--charcoal); color: var(--cream); }
+    .nav-tile:hover .tile-num { color: rgba(240,237,230,0.3); }
+    .nav-tile:hover .tile-arrow { color: var(--gold); }
+
+    .tile-num {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      color: var(--cream-dk);
+      margin-bottom: 0.6rem;
+    }
+
+    .tile-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .tile-arrow {
+      align-self: flex-end;
+      font-size: 1.2rem;
+      color: var(--gold);
+    }
+
+    @media (max-width: 720px) {
+      .nav-tiles { grid-template-columns: 1fr 1fr; }
+      .nav-tile { border-right: 1px solid var(--cream-dk); border-bottom: 1px solid var(--cream-dk); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">JLC<span>.</span></a>
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<main class="page">
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-role fade-up">Career Portfolio · 2026</p>
+      <h1 class="hero-name fade-up d1">
+        John Lou<br><em>L. Cambial</em>
+      </h1>
+      <p class="hero-desc fade-up d2">
+        Administrative &amp; Data Support Associate — turning data into clear, accurate, and actionable results.
+      </p>
+      <div class="hero-actions fade-up d3">
+        <a href="work.html" class="btn btn-solid">View My Work</a>
+        <a href="contact.html" class="btn">Let's Connect</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- Placeholder gradient if no photo file is present -->
+      <div style="width:100%;height:100%;background:linear-gradient(160deg,#2a2a2a 0%,#1a1a1a 100%);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;color:rgba(240,237,230,0.25);">
+          <div style="font-family:var(--serif);font-size:5rem;line-height:1;">JLC</div>
+          <div style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.5rem;">Replace with your photo</div>
+        </div>
+      </div>
+      <div class="hero-photo-overlay"></div>
+      <div class="hero-line"></div>
+      <div class="hero-scroll">Scroll</div>
+    </div>
+  </section>
+
+  <!-- QUICK NAV TILES -->
+  <div class="nav-tiles">
+    <a href="about.html" class="nav-tile fade-up">
+      <span class="tile-num">01</span>
+      <span class="tile-title">About Me</span>
+      <span class="tile-arrow">→</span>
+    </a>
+    <a href="resume.html" class="nav-tile fade-up d1">
+      <span class="tile-num">02</span>
+      <span class="tile-title">Skills &amp; Resume</span>
+      <span class="tile-arrow">→</span>
+    </a>
+    <a href="work.html" class="nav-tile fade-up d2">
+      <span class="tile-num">03</span>
+      <span class="tile-title">My Work</span>
+      <span class="tile-arrow">→</span>
+    </a>
+    <a href="contact.html" class="nav-tile fade-up d3">
+      <span class="tile-num">04</span>
+      <span class="tile-title">Let's Connect</span>
+      <span class="tile-arrow">→</span>
+    </a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 John Lou L. Cambial</span>
+  <span>Administrative &amp; Data Support Associate</span>
+</footer>
+
+<script>
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Hamburger
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('open');
+  }
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

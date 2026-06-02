@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — John Lou L. Cambial</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-wrapper {
+      min-height: calc(100vh - 72px - 60px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">JLC<span>.</span></a>
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+  <div class="contact-wrapper">
+
+    <div class="contact-hero">
+      <div class="contact-intro fade-up">
+        <p class="section-label">Let's Connect</p>
+        <span class="gold-rule"></span>
+        <h2>Open to new opportunities</h2>
+        <p>
+          I'm currently looking for data operations, record management, and administrative support roles — remote, on-site, or hybrid. If you think I'd be a good fit for your team, I'd love to hear from you.
+        </p>
+        <a href="mailto:bialjuritz@gmail.com" class="btn btn-solid">Send Me an Email →</a>
+      </div>
+
+      <div class="contact-items fade-up d2">
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <a href="mailto:bialjuritz@gmail.com">bialjuritz@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Phone</span>
+          <a href="tel:+639850218506">0985-021-8506</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/john-lou-cambial-19057b311" target="_blank" rel="noopener">
+            linkedin.com/in/john-lou-cambial-19057b311
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Based In</span>
+          <span style="font-size:1.05rem;color:var(--charcoal);">Davao City, Philippines</span>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Availability</span>
+          <span style="font-size:1.05rem;color:var(--charcoal);">Open to remote &amp; local roles</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:1px solid var(--cream-dk);margin:0 5vw;"></div>
+
+    <!-- Closing statement -->
+    <section style="padding:4rem 5vw;max-width:800px;margin:0 auto;text-align:center;">
+      <div class="fade-up">
+        <p style="font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--charcoal);line-height:1.5;margin-bottom:1.5rem;">
+          "Data isn't just numbers — it's the story of decisions waiting to be made."
+        </p>
+        <p style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);">John Lou L. Cambial</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 John Lou L. Cambial</span>
+  <span>
+    <a href="mailto:bialjuritz@gmail.com">bialjuritz@gmail.com</a> ·
+    <a href="https://linkedin.com/in/john-lou-cambial-19057b311" target="_blank" rel="noopener">LinkedIn</a>
+  </span>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('open');
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

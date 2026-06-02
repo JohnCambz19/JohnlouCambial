@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work — John Lou L. Cambial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">JLC<span>.</span></a>
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="work.html" class="active">Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+  <!-- HEADER -->
+  <section class="work-hero">
+    <p class="section-label fade-up">My Work</p>
+    <span class="gold-rule fade-up"></span>
+    <h2 class="fade-up" style="max-width:700px;">How I work — and what I've built</h2>
+    <p class="fade-up d1" style="max-width:500px;margin-top:0.8rem;">Every project follows a consistent methodology: collect, verify, analyze, report, deliver.</p>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section class="process-section">
+    <p class="section-label fade-up">The Process</p>
+
+    <div class="timeline">
+      <div class="timeline-step fade-up">
+        <div class="step-label">Data Collection</div>
+        <div class="step-desc">Gather &amp; encode source records</div>
+        <div class="step-circle">1</div>
+      </div>
+
+      <div class="timeline-step fade-up d1">
+        <div class="step-circle">2</div>
+        <div class="step-label">Verification</div>
+        <div class="step-desc">Check accuracy &amp; identify discrepancies</div>
+      </div>
+
+      <div class="timeline-step fade-up d2">
+        <div class="step-label">Analysis</div>
+        <div class="step-desc">Process and visualize data</div>
+        <div class="step-circle">3</div>
+      </div>
+
+      <div class="timeline-step fade-up d3">
+        <div class="step-circle">4</div>
+        <div class="step-label">Reporting</div>
+        <div class="step-desc">Prepare summaries &amp; outputs</div>
+      </div>
+
+      <div class="timeline-step fade-up d4">
+        <div class="step-label">Delivery</div>
+        <div class="step-desc">Submit accurate, timely results</div>
+        <div class="step-circle">5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-section">
+    <div class="projects-inner">
+      <p class="section-label fade-up">Projects</p>
+      <span class="gold-rule fade-up"></span>
+      <h2 class="fade-up">Selected work</h2>
+
+      <!-- Project 1: Labor Market -->
+      <div class="project-card fade-up d1">
+        <div class="project-info">
+          <div class="project-tag">Data Analysis · DOLE Region XI · 2025</div>
+          <h3>Youth City Labor Market Analysis</h3>
+          <p>
+            Consolidated and analyzed employment data across Davao City for regional labor market planning — covering graduate distribution, employer profiling, and job vacancy matching. Produced data visualizations using Python to surface actionable insights for government decision-makers.
+          </p>
+
+          <div class="project-stats">
+            <div class="stat">
+              <span class="stat-num">14,104</span>
+              <span class="stat-label">Graduates covered</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">13,138</span>
+              <span class="stat-label">Job vacancies analyzed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">671</span>
+              <span class="stat-label">Companies profiled</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-visual">
+          <ul class="project-role-list">
+            <li>Data consolidation from partner schools (CHED RO XI / PESO)</li>
+            <li>Graduate distribution by field of study (male / female / total)</li>
+            <li>Job vacancy analysis per industry sector</li>
+            <li>Employer profiling across 671 Davao City companies</li>
+            <li>ARIMA-based forecasting for employment trends</li>
+            <li>Final report and visualization deliverables</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 2: GIP Website -->
+      <div class="project-card fade-up d2">
+        <div class="project-info">
+          <div class="project-tag">Web Development · Content Creation · DOLE XI</div>
+          <h3>GIP &amp; PHILJOB Quick-Guide Website</h3>
+          <p>
+            Designed and developed a multi-page guide website to improve public access to the Government Internship Program (GIP) and PHILJOB registration. The site reduced inquiry handling time significantly by providing clear, self-service navigation for applicants. Complemented by printed flyers for in-office distribution.
+          </p>
+          <br />
+          <div style="font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Outcome</div>
+          <p style="font-size:0.9rem;">Significantly reduced inquiry handling time. Multi-page navigation covering GIP overview, application steps, and post-registration instructions — complemented by printed flyers for in-office distribution.</p>
+        </div>
+
+        <div class="project-visual">
+          <ul class="project-role-list">
+            <li>Web Developer &amp; Content Creator</li>
+            <li>GIP program overview &amp; eligibility page</li>
+            <li>Step-by-step application guide</li>
+            <li>PHILJOB registration walkthrough</li>
+            <li>Post-registration instructions section</li>
+            <li>Flyer design for in-office distribution</li>
+            <li>Multi-page navigation structure</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:5rem 5vw;text-align:center;max-width:700px;margin:0 auto;">
+    <p class="section-label fade-up">Let's work together</p>
+    <h2 class="fade-up d1" style="margin-bottom:1rem;">Have a project in mind?</h2>
+    <p class="fade-up d2" style="margin-bottom:2rem;">I'm open to remote, on-site, or hybrid opportunities in data operations, record management, and administrative support.</p>
+    <a href="contact.html" class="btn btn-solid fade-up d3">Get In Touch →</a>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 John Lou L. Cambial</span>
+  <span>Administrative &amp; Data Support Associate · Davao City, PH</span>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('open');
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
